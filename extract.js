@@ -8,11 +8,13 @@ async function analyseSite(url) {
 
     const $ = cheerio.load(html);
 
+    // HEADINGS
     const headings = [];
     $("h1, h2, h3").each((i, el) => {
       headings.push($(el).text().trim());
     });
 
+    // BUTTONS / CTAs
     const buttons = [];
     $("a, button").each((i, el) => {
       const text = $(el).text().trim();
@@ -21,6 +23,9 @@ async function analyseSite(url) {
       }
     });
 
+    const uniqueButtons = [...new Set(buttons)];
+
+    // PARAGRAPH TEXT
     const paragraphs = [];
     $("p").each((i, el) => {
       paragraphs.push($(el).text().trim());
@@ -28,9 +33,24 @@ async function analyseSite(url) {
 
     const bodyText = paragraphs.join(" ");
 
+    // META DESCRIPTION
+    const metaDescription = $('meta[name="description"]').attr("content");
+
+    // FIND COLOURS IN HTML
+    const colorMatches = html.match(/#[0-9a-fA-F]{3,6}/g) || [];
+    const colors = [...new Set(colorMatches)].slice(0, 10);
+
+    // FIND FONT FAMILIES
+    const fontMatches = html.match(/font-family:[^;]+/g) || [];
+    const fonts = [...new Set(fontMatches)].slice(0, 5);
+
     const result = {
-      headings,
-      buttons,
+      url,
+      metaDescription,
+      headings: headings.slice(0, 10),
+      buttons: uniqueButtons.slice(0, 10),
+      colors,
+      fonts,
       bodyText: bodyText.slice(0, 1000)
     };
 
