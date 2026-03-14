@@ -55,6 +55,9 @@ async function analyseSite(url) {
     };
 
     console.log(JSON.stringify(result, null, 2));
+    
+    const fs = require("fs");
+    fs.writeFileSync("siteData.json", JSON.stringify(result, null, 2));
 
   } catch (err) {
     console.error("Error analysing site:", err.message);
@@ -67,5 +70,6 @@ if (!url) {
   console.log("Usage: node extract.js https://example.com");
   process.exit();
 }
+
 
 analyseSite(url);
