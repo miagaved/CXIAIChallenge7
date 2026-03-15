@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brand Cohesion Auditor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>Brand Cohesion Auditor</h1>
+    <p class="subtitle">
+      Enter a website URL to automatically analyse brand tone, messaging, and visual cohesion.
+    </p>
+
+    <div class="input-row">
+      <input id="urlInput" type="text" placeholder="https://example.com" />
+      <button id="analyseBtn">Analyse</button>
+    </div>
+
+    <div id="status"></div>
+
+    <section id="results" class="hidden">
+      <div class="card">
+        <h2>Brand Analysis</h2>
+        <pre id="brandReport"></pre>
+      </div>
+
+      <div class="card">
+        <h2>Website Screenshot</h2>
+        <img id="siteScreenshot" alt="Website screenshot" />
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
