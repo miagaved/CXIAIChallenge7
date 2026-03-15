@@ -1,5 +1,24 @@
 # CXIAIChallenge7
 
+Usage instructions:
+Before running the project make sure the following are installed:
+- Node.js
+- npm
+- a Gemini API key
+
+Download and install Node.js from https://nodejs.org
+Then run: npm install
+
+Replace the Xs in .env with your own personal API key
+
+Start a server by running: node server.js
+If successful, the terminal should display something like: Server running at http://localhost:3000
+
+Leave this running, open your browser and go to http://localhost:3000
+Then use the application.
+
+
+
 Ideas:
 AI system to identify and extract design elements from current webpages, to allow for consistent web design - build library of web page elements with consistent design and branding
 If using an element from current/past webpage, link where the element is from
