@@ -9,10 +9,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.post("/analyse", async (req, res) => {
-  const { url } = req.body;
+  const { url, templateKey } = req.body;
 
   try {
-    const result = await runPipeline(url);
+    const result = await runPipeline(url, templateKey);
     res.json(result);
   } catch (err) {
     console.error("Pipeline failed:", err);

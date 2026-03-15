@@ -1,6 +1,7 @@
 const { exec } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const { analyseAndCompare } = require("./analyseBrand"); 
 
 function runCommand(command) {
   return new Promise((resolve, reject) => {
@@ -22,26 +23,27 @@ function makeSafeFilename(url) {
     .slice(0, 80);
 }
 
-async function runPipeline(url) {
+async function runPipeline(url, templateKey) {
   if (!url) {
     throw new Error("URL is required");
   }
 
+  console.log(`Extracting site data for ${url}...`);
   await runCommand(`node extract.js "${url}"`);
+  
+  console.log("Capturing screenshot...");
   await runCommand(`node screenshot.js "${url}"`);
-  await runCommand(`node analyseBrand.js`);
+
+  console.log(`Comparing site to template: ${templateKey}...`);
+  const brandReport = await analyseAndCompare(templateKey);
 
   const siteData = JSON.parse(
     fs.readFileSync(path.join(__dirname, "siteData.json"), "utf8")
   );
 
-  const brandReport = fs.readFileSync(
-    path.join(__dirname, "brandReport.txt"),
-    "utf8"
-  );
-
   const screenshot = `${makeSafeFilename(url)}.png`;
 
+  console.log("Pipeline complete!");
   return {
     siteData,
     brandReport,

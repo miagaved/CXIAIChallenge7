@@ -1,0 +1,22 @@
+{
+  "samsung": {
+    "name": "Samsung Style",
+    "description": "Premium, clean, and tech-focused with bold headings and blue accents.",
+    "dna": {
+      "primary_colors": ["#0c4da2", "#000000", "#ffffff"],
+      "fonts": ["SamsungSharpSans", "Arial"],
+      "button_style": "Rounded corners, blue background, white text",
+      "tone": "Innovative and professional"
+    }
+  },
+  "minimalist": {
+    "name": "Minimalist Style",
+    "description": "Clean, spacious, and sophisticated with plenty of white space.",
+    "dna": {
+      "primary_colors": ["#ffffff", "#333333", "#f4f4f4"],
+      "fonts": ["Inter", "Helvetica"],
+      "button_style": "Sharp edges, thin borders",
+      "tone": "Sophisticated and breathable"
+    }
+  }
+}

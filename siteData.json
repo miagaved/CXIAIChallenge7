@@ -1,0 +1,46 @@
+{
+  "url": "https://www.wikipedia.org/",
+  "metaDescription": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+  "headings": [
+    "Wikipedia\n\nThe Free Encyclopedia",
+    "Wikipedia\n\n25 years of the free encyclopedia",
+    "Unlock birthday surprises on Wikipedia",
+    "1,000,000+\n\n\narticles",
+    "100,000+\n\n\narticles",
+    "10,000+\n\n\narticles",
+    "1,000+\n\n\narticles",
+    "100+\n\n\narticles"
+  ],
+  "buttons": [
+    "English\n7,141,000+ articles",
+    "日本語\n1,491,000+ 記事",
+    "Deutsch\n3.099.000+ Artikel",
+    "Русский\n2 087 000+ статей",
+    "Français\n2 740 000+ articles",
+    "Español\n2.095.000+ artículos",
+    "Italiano\n1.957.000+ voci",
+    "中文\n1,524,000+ 条目 / 條目",
+    "Português\n1.165.000+ artigos",
+    "Polski\n1 685 000+ haseł"
+  ],
+  "colors": [
+    "#202122",
+    "#404244",
+    "#101418",
+    "#54595d",
+    "#72777d",
+    "#a2a9b1",
+    "#fff",
+    "#36c",
+    "#3056a9",
+    "#233566"
+  ],
+  "fonts": [
+    "font-family:sans-serif",
+    "font-family:var(--font-family-monospace--fallback)",
+    "font-family:var(--font-family-system-sans)",
+    "font-family:inherit",
+    "font-family:Linux Libertine,Hoefler Text,Georgia,Times New Roman,Times,serif"
+  ],
+  "bodyText": "Save your favorite articles to read offline, sync your reading lists across devices and customize your reading experience with the official Wikipedia app. This page is available under the Creative Commons Attribution-ShareAlike License\nTerms of Use\nPrivacy Policy"
+}
