@@ -1,5 +1,10 @@
 # CXIAIChallenge7
 
+Link to video explaining the project:
+https://1drv.ms/v/c/501b954b3692e60e/IQBHyrDBFBVZRa7MRRBs49C7AfnBLasbEUF5fXFFxRn_D2Q
+
+------------------------------------------------------------------
+
 Before running the project make sure the following are installed:
 - Node.js
 - npm
